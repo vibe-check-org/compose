@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  keycloak:
+    image: keycloak/keycloak:latest
+    container_name: keycloak
+    ports:
+      - published: 8880
+        target: 8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: p
+    volumes:
+      - type: bind
+        source: ./realm-config.json
+        target: /opt/keycloak/data/import/realm-config.json
+    entrypoint:
+      - '/opt/keycloak/bin/kc.sh'
+      - 'start-dev'
+      - '--import-realm'
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+        reservations:
+          cpus: '2.0'
+          memory: 2G
+
+networks:
+  hka-network:
