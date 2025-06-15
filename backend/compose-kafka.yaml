@@ -6,12 +6,25 @@ services:
       - "2181:2181"
     hostname: zookeeper
     healthcheck:
-      test: ["CMD", "echo", "ruok", "|", "nc", "localhost", "2181", "|", "grep", "imok"]
+      test:
+        [
+          "CMD",
+          "echo",
+          "ruok",
+          "|",
+          "nc",
+          "localhost",
+          "2181",
+          "|",
+          "grep",
+          "imok",
+        ]
       interval: 5s
       timeout: 2s
       retries: 5
       start_period: 5s
-
+    networks:
+      omnixys-network: {}
   kafka:
     depends_on:
       zookeeper:
@@ -31,3 +44,5 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: ${KAFKA_ADVERTISED_HOST_NAME}
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     # command: sh -c "export KAFKA_ADVERTISED_HOST_NAME=$(hostname); /usr/bin/start-kafka.sh"
+    networks:
+      omnixys-network: {}

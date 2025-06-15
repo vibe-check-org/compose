@@ -1,0 +1,375 @@
+include:
+  - path: ../keycloak/compose.yml
+  - path: ../kafka/compose.yml
+  - path: ../mongoDb/compose.yml
+  - path: ../postgres/compose.yml
+    
+services:
+  answer:
+    container_name: answer
+    image: ghcr.io/vibe-check-org/antwort-service:latest
+    pull_policy: always
+    restart: unless-stopped
+    env_file: 
+      - ./env/answer.env
+    volumes:
+      - type: bind
+        source: ./env/answer.env
+        target: /workspace/.env
+        read_only: true
+      - type: bind
+        source: ./.health.env
+        target: /workspace/.health.env
+      - type: bind
+        source: ../../keys/certificate.crt
+        target: /workspace/certificate.crt
+        read_only: true
+      - type: bind
+        source: ../../keys/key.pem
+        target: /workspace/key.pem
+        read_only: true
+      - type: bind
+        source: ./resource/answer.yaml
+        target: /opt/app/dist/config/resources/app.yml
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/answer/log
+        target: /opt/app/log
+      - type: bind
+        source: ${SERVICE_PATH}/answer/src/config/env
+        target: /opt/app/dist/config/env
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/answer/src/config/resources
+        target: /opt/app/dist/config/resources
+        read_only: true
+    ports:
+      - target: 3000
+        published: 3004
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/readiness || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  authentication:
+    container_name: authentication
+    image: ghcr.io/vibe-check-org/authentication-service:latest
+    pull_policy: always
+    restart: unless-stopped
+    env_file: 
+      - ./env/authentication.env
+    volumes:
+      - type: bind
+        source: ./env/authentication.env
+        target: /workspace/.env
+      - type: bind
+        source: ../../keys/certificate.crt
+        target: /workspace/certificate.crt
+        read_only: true
+      - type: bind
+        source: ../../keys/key.pem
+        target: /workspace/key.pem
+        read_only: true
+      - type: bind
+        source: ./resource/authentication.yaml
+        target: /opt/app/dist/config/resources/app.yml
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/authentication/log
+        target: /opt/app/log
+      - type: bind
+        source: ${SERVICE_PATH}/authentication/src/config/env
+        target: /opt/app/dist/config/env
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/authentication/src/config/resources
+        target: /opt/app/dist/config/resources
+        read_only: true
+    ports:
+      - target: 3000
+        published: 3005
+    depends_on:
+      kafka:
+        condition: service_healthy
+      keycloak:
+        condition: service_started
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/readiness || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  gateway:
+    container_name: gateway
+    image: ghcr.io/vibe-check-org/gateway-service:latest
+    pull_policy: always
+    restart: unless-stopped
+    env_file: 
+      - ./env/gateway.env
+    volumes:
+      - type: bind
+        source: ./env/gateway.env
+        target: /workspace/.env
+        read_only: true
+      - type: bind
+        source: ./.health.env
+        target: /workspace/.health.env
+      - type: bind
+        source: ../../keys/certificate.crt
+        target: /workspace/certificate.crt
+        read_only: true
+      - type: bind
+        source: ../../keys/key.pem
+        target: /workspace/key.pem
+        read_only: true
+      - type: bind
+        source: ./resource/gateway.yaml
+        target: /opt/app/dist/config/resources/app.yml
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/gateway/log
+        target: /opt/app/log
+    depends_on:
+      authentication:
+        condition: service_started
+      notification:
+        condition: service_started
+      answer:
+        condition: service_started
+      questionnaire:
+        condition: service_started
+      user:
+        condition: service_started
+      vibeProfile:
+        condition: service_started
+    ports:
+      - target: 3000
+        published: 4000
+
+  notification:
+    container_name: notification
+    image: ghcr.io/vibe-check-org/notification-service:latest
+    pull_policy: always
+    restart: unless-stopped
+    env_file: 
+      - ./env/notification.env
+    volumes:
+      - type: bind
+        source: ./env/notification.env
+        target: /workspace/.env
+        read_only: true
+      - type: bind
+        source: ./.health.env
+        target: /workspace/.health.env
+      - type: bind
+        source: ../../keys/certificate.crt
+        target: /workspace/certificate.crt
+        read_only: true
+      - type: bind
+        source: ../../keys/key.pem
+        target: /workspace/key.pem
+        read_only: true
+      - type: bind
+        source: ./resource/notification.yaml
+        target: /opt/app/dist/config/resources/app.yml
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/notification/log
+        target: /opt/app/log
+      - type: bind
+        source: ${SERVICE_PATH}/notification/src/config/env
+        target: /opt/app/dist/config/env
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/notification/src/config/resources
+        target: /opt/app/dist/config/resources
+        read_only: true
+    ports:
+      - target: 3000
+        published: 3006
+    depends_on:
+      kafka:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/readiness || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  questionnaire:
+    container_name: questionnaire
+    image: ghcr.io/vibe-check-org/questionnaire-service:latest
+    pull_policy: always
+    restart: unless-stopped
+    env_file: 
+      - ./env/questionnaire.env
+      - ./.health.env
+    volumes:
+      - type: bind
+        source: ./env/questionnaire.env
+        target: /workspace/.env
+        read_only: true
+      - type: bind
+        source: ./.health.env
+        target: /workspace/.health.env
+      - type: bind
+        source: ../../keys/certificate.crt
+        target: /workspace/certificate.crt
+        read_only: true
+      - type: bind
+        source: ../../keys/key.pem
+        target: /workspace/key.pem
+        read_only: true
+      - type: bind
+        source: ./resource/questionnaire.yaml
+        target: /opt/app/dist/config/resources/app.yml
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/questionnaire/log
+        target: /opt/app/log
+      - type: bind
+        source: ${SERVICE_PATH}/questionnaire/src/config/env
+        target: /opt/app/dist/config/env
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/questionnaire/src/config/resources
+        target: /opt/app/dist/config/resources
+        read_only: true
+    ports:
+      - target: 3000
+        published: 3003
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/readiness || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  user:
+    container_name: user
+    image: ghcr.io/vibe-check-org/user-service:latest
+    pull_policy: always
+    restart: unless-stopped
+    env_file: 
+      - ./env/user.env
+      - ./.health.env
+    volumes:
+      - type: bind
+        source: ./env/user.env
+        target: /workspace/.env
+        read_only: true
+      - type: bind
+        source: ./.health.env
+        target: /workspace/.health.env
+      - type: bind
+        source: ../../keys/certificate.crt
+        target: /workspace/certificate.crt
+        read_only: true
+      - type: bind
+        source: ../../keys/key.pem
+        target: /workspace/key.pem
+        read_only: true
+      - type: bind
+        source: ./resource/user.yaml
+        target: /opt/app/dist/config/resources/app.yml
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/user/log
+        target: /opt/app/log
+      - type: bind
+        source: ${SERVICE_PATH}/user/src/config/env
+        target: /opt/app/dist/config/env
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/user/src/config/resources
+        target: /opt/app/dist/config/resources
+        read_only: true
+    ports:
+      - target: 3000
+        published: 3001
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/readiness || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  vibeProfile:
+    container_name: vibeProfile
+    image: ghcr.io/vibe-check-org/vibe-profile-service:latest
+    pull_policy: always
+    restart: unless-stopped
+    env_file: 
+      - ./env/vibeProfile.env
+      - ./.health.env
+    volumes:
+      - type: bind
+        source: ./env/vibeProfile.env
+        target: /workspace/.env
+        read_only: true
+      - type: bind
+        source: ./.health.env
+        target: /workspace/.health.env
+      - type: bind
+        source: ../../keys/certificate.crt
+        target: /workspace/certificate.crt
+        read_only: true
+      - type: bind
+        source: ../../keys/key.pem
+        target: /workspace/key.pem
+        read_only: true
+      - type: bind
+        source: ./resource/vibeProfile.yaml
+        target: /opt/app/dist/config/resources/app.yml
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/vibe-profile/log
+        target: /opt/app/log
+      - type: bind
+        source: ${SERVICE_PATH}/vibeProfile/src/config/env
+        target: /opt/app/dist/config/env
+        read_only: true
+      - type: bind
+        source: ${SERVICE_PATH}/vibe-profile/src/config/resources
+        target: /opt/app/dist/config/resources
+        read_only: true
+    ports:
+      - target: 3000
+        published: 3002
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/readiness || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+
+
+
+

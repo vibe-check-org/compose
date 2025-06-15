@@ -14,7 +14,7 @@
   #       exit
 
 services:
-  postgres:
+  db:
     image: postgres:latest
     ports:
       - published: 5432

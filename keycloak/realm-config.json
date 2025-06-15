@@ -14,7 +14,12 @@
     }
   ],
   "roles": {
-    "realm": [],
+    "realm": [
+      {
+        "name": "Admin",
+        "description": "Realm-weite Admin-Rolle"
+      }
+    ],
     "client": {
       "vibeCheck": [{ "name": "admin" }, { "name": "user" }]
     }
@@ -29,7 +34,8 @@
       "credentials": [{ "type": "password", "value": "p" }],
       "clientRoles": {
         "vibeCheck": ["admin"]
-      }
+      },
+      "realmRoles": ["Admin"]
     },
     {
       "username": "user",

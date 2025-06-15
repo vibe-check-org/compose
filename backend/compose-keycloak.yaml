@@ -12,7 +12,7 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: p
     volumes:
       - type: bind
-        source: ./realm-config.json
+        source: ..//realm-config.json
         target: /opt/keycloak/data/import/realm-config.json
     entrypoint:
       - '/opt/keycloak/bin/kc.sh'
@@ -27,3 +27,6 @@ services:
         reservations:
           cpus: '2.0'
           memory: 2G
+
+networks:
+  hka-network:

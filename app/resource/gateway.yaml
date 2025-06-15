@@ -1,0 +1,23 @@
+# ==============================================================================
+# N o d e
+# ==============================================================================
+node:
+  port: 8000
+
+# ==============================================================================
+# S U B G R A P H
+# ==============================================================================
+subgraph:
+  answer: http://answer:3000/graphql
+  authentication: http://authentication:3000/graphql
+  notification: http://notification:3000/graphql
+  questionnaire: http://questionnaire:3000/graphql
+  user: http://user:3000/graphql
+  vibeProfile: http://vibeProfile:3000/graphql
+
+# ==============================================================================
+# K A F K A
+# ==============================================================================
+kafka:
+  host: kafka
+  groupId: vibe-check-gateway-service
