@@ -4,6 +4,7 @@ services:
   keycloak:
     image: keycloak/keycloak:latest
     container_name: keycloak
+    hostname: keycloak
     ports:
       - published: 8880
         target: 8080

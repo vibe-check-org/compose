@@ -12,6 +12,7 @@ services:
     restart: unless-stopped
     env_file: 
       - ./env/answer.env
+      - ./.health.env
     volumes:
       - type: bind
         source: ./env/answer.env
@@ -65,6 +66,7 @@ services:
     restart: unless-stopped
     env_file: 
       - ./env/authentication.env
+      - ./.health.env
     volumes:
       - type: bind
         source: ./env/authentication.env
@@ -114,6 +116,7 @@ services:
     restart: unless-stopped
     env_file: 
       - ./env/gateway.env
+      - ./.health.env
     volumes:
       - type: bind
         source: ./env/gateway.env
@@ -139,20 +142,20 @@ services:
         target: /opt/app/log
     depends_on:
       authentication:
-        condition: service_started
+        condition: service_healthy
       notification:
-        condition: service_started
+        condition: service_healthy
       answer:
-        condition: service_started
+        condition: service_healthy
       questionnaire:
-        condition: service_started
+        condition: service_healthy
       user:
-        condition: service_started
+        condition: service_healthy
       vibeProfile:
-        condition: service_started
+        condition: service_healthy
     ports:
       - target: 3000
-        published: 4000
+        published: 3000
 
   notification:
     container_name: notification
@@ -161,6 +164,7 @@ services:
     restart: unless-stopped
     env_file: 
       - ./env/notification.env
+      - ./.health.env
     volumes:
       - type: bind
         source: ./env/notification.env
@@ -201,7 +205,7 @@ services:
       mongodb:
         condition: service_healthy
     healthcheck:
-      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/readiness || exit 1"]
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/liveness || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 3
