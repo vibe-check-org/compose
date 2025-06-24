@@ -25,8 +25,6 @@ services:
       timeout: 3s
       retries: 5
       start_period: 10s
-    networks:
-      omnixys-network: {}
 
   ########################################
   # 🌐 Mongo Express UI
@@ -42,5 +40,3 @@ services:
     ports:
       - published: 8091
         target: 8081
-    networks:
-      omnixys-network: {}

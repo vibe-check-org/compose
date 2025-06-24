@@ -27,6 +27,3 @@ services:
         reservations:
           cpus: '2.0'
           memory: 2G
-
-networks:
-  hka-network:
