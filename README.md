@@ -33,6 +33,7 @@
 * Zeile **25**: `read_only: true` bei `key.pem`
 * Zeile **29**: `read_only: true` bei `certificate.crt`
 * Zeile **42**: `user: "postgres:postgres"`
+* Zeile **49**: Kommentar entfernen!
 
 ✅ Dadurch kann der Container mit Root-Rechten starten und die Dateiberechtigungen korrekt setzen.
 
@@ -84,6 +85,7 @@ docker compose down
 * Zeilen **7–10**: `command:`-Block zur TLS-Aktivierung wieder aktivieren
 * Zeilen **25, 29**: `read_only: true` wieder hinzufügen
 * Zeile **42**: `user: "postgres:postgres"` wieder aktivieren
+* Zeile **49**: wieder auskommentieren
 
 ---
 
