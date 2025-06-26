@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS frage;
+DROP TABLE IF EXISTS fragebogen;
+DROP TABLE IF EXISTS kategorie;

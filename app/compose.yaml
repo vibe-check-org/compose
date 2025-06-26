@@ -30,18 +30,14 @@ services:
         target: /workspace/key.pem
         read_only: true
       - type: bind
-        source: ./resource/answer.yaml
-        target: /opt/app/dist/config/resources/app.yml
-        read_only: true
-      - type: bind
-        source: ${SERVICE_PATH}/answer/log
+        source: ./logs/answer
         target: /opt/app/log
       - type: bind
-        source: ${SERVICE_PATH}/answer/src/config/env
+        source: ./env/answer.env
         target: /opt/app/dist/config/env
         read_only: true
       - type: bind
-        source: ${SERVICE_PATH}/answer/src/config/resources
+        source: ./resources/answer
         target: /opt/app/dist/config/resources
         read_only: true
     ports:
@@ -80,19 +76,15 @@ services:
         target: /workspace/key.pem
         read_only: true
       - type: bind
-        source: ./resource/authentication.yaml
-        target: /opt/app/dist/config/resources/app.yml
-        read_only: true
-      - type: bind
-        source: ${SERVICE_PATH}/authentication/log
+        source: ./logs/authentication
         target: /opt/app/log
       - type: bind
-        source: ${SERVICE_PATH}/authentication/src/config/env
+        source: ./env/authentication.env
         target: /opt/app/dist/config/env
         read_only: true
       - type: bind
-        source: ${SERVICE_PATH}/authentication/src/config/resources
-        target: /opt/app/dist/config/resources
+        source: ./resources/authentication/
+        target: /opt/app/dist/config/resources/
         read_only: true
     ports:
       - target: 3000
@@ -134,12 +126,12 @@ services:
         target: /workspace/key.pem
         read_only: true
       - type: bind
-        source: ./resource/gateway.yaml
-        target: /opt/app/dist/config/resources/app.yml
-        read_only: true
-      - type: bind
-        source: ${SERVICE_PATH}/gateway/log
+        source: ./logs/gateway
         target: /opt/app/log
+      - type: bind
+        source: ./resources/gateway
+        target: /opt/app/dist/config/resources
+        read_only: true
     depends_on:
       authentication:
         condition: service_healthy
@@ -182,18 +174,14 @@ services:
         target: /workspace/key.pem
         read_only: true
       - type: bind
-        source: ./resource/notification.yaml
-        target: /opt/app/dist/config/resources/app.yml
-        read_only: true
-      - type: bind
-        source: ${SERVICE_PATH}/notification/log
+        source: ./logs/notification
         target: /opt/app/log
       - type: bind
-        source: ${SERVICE_PATH}/notification/src/config/env
+        source: ./env/notification.env
         target: /opt/app/dist/config/env
         read_only: true
       - type: bind
-        source: ${SERVICE_PATH}/notification/src/config/resources
+        source: ./resources/notification
         target: /opt/app/dist/config/resources
         read_only: true
     ports:
@@ -236,18 +224,14 @@ services:
         target: /workspace/key.pem
         read_only: true
       - type: bind
-        source: ./resource/questionnaire.yaml
-        target: /opt/app/dist/config/resources/app.yml
-        read_only: true
-      - type: bind
-        source: ${SERVICE_PATH}/questionnaire/log
+        source: ./logs/questionnaire
         target: /opt/app/log
       - type: bind
-        source: ${SERVICE_PATH}/questionnaire/src/config/env
+        source: ./env/questionnaire.env
         target: /opt/app/dist/config/env
         read_only: true
       - type: bind
-        source: ${SERVICE_PATH}/questionnaire/src/config/resources
+        source: ./resources/questionnaire
         target: /opt/app/dist/config/resources
         read_only: true
     ports:
@@ -290,18 +274,14 @@ services:
         target: /workspace/key.pem
         read_only: true
       - type: bind
-        source: ./resource/user.yaml
-        target: /opt/app/dist/config/resources/app.yml
-        read_only: true
-      - type: bind
-        source: ${SERVICE_PATH}/user/log
+        source: ./logs/user
         target: /opt/app/log
       - type: bind
-        source: ${SERVICE_PATH}/user/src/config/env
+        source: ./env/user.env
         target: /opt/app/dist/config/env
         read_only: true
       - type: bind
-        source: ${SERVICE_PATH}/user/src/config/resources
+        source: ./resources/user
         target: /opt/app/dist/config/resources
         read_only: true
     ports:
@@ -344,18 +324,14 @@ services:
         target: /workspace/key.pem
         read_only: true
       - type: bind
-        source: ./resource/vibeProfile.yaml
-        target: /opt/app/dist/config/resources/app.yml
-        read_only: true
-      - type: bind
-        source: ${SERVICE_PATH}/vibe-profile/log
+        source: ./logs/vibe-profile
         target: /opt/app/log
       - type: bind
-        source: ${SERVICE_PATH}/vibeProfile/src/config/env
+        source: ./env/vibeProfile.env
         target: /opt/app/dist/config/env
         read_only: true
       - type: bind
-        source: ${SERVICE_PATH}/vibe-profile/src/config/resources
+        source: ./resources/vibeProfile
         target: /opt/app/dist/config/resources
         read_only: true
     ports:

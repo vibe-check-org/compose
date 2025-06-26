@@ -1,0 +1,18 @@
+# Hauptschema
+schema {
+  mutation: Mutation
+}
+# Mutation-Typ
+type Mutation {
+  login(username: String!, password: String!): LoginResult
+  refresh(refresh_token: String!): LoginResult
+}
+
+# Ergebnis des Logins
+type LoginResult {
+  access_token: String!
+  expires_in: Int!
+  refresh_token: String!
+  refresh_expires_in: Int!
+  roles: [String!]
+}
