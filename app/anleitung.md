@@ -1,10 +1,19 @@
 ## 🛠 PostgreSQL vorbereiten (einmalig)
 
-### 0. Repository vorbereiten
+### 0. Projektstruktur vorbereiten
 
-📥 **Volumes-Repository klonen oder herunterladen:**
+📥 **Benötigte Repositories klonen oder herunterladen:**
 
-> Entweder über GitHub klonen oder als ZIP herunterladen. Wichtig sind die folgenden Ordner:
+> Lege ein Projektverzeichnis an und platziere darin folgende Ordner:
+>
+> * `keys`
+> * `compose`
+> * `frontend`
+> * `volumes`
+
+📦 **Volumes-Repository vorbereiten:**
+
+> Wenn du das Volumes-Repository separat herunterlädst, achte darauf, dass folgende Unterordner im Ordner `volumes` vorhanden sind:
 >
 > * `keycloak`
 > * `mongo`
@@ -12,13 +21,13 @@
 
 📁 **Ordner umbenennen:**
 
-> Nach dem Download den Ordner `postgres template` in `postgres` umbenennen, damit `docker compose` korrekt funktioniert.
+> Benenne `volumes/postgres template` in `volumes/postgres` um, damit `docker compose` korrekt funktioniert.
 
 ---
 
 ### 1. `postgres/compose.yml` temporär anpassen
 
-🔧 **Folgende Zeilen auskommentieren:**
+🔧 **Folgende Zeilen in der Datei auskommentieren:**
 
 * Zeilen **7–10**: `command:`-Block mit TLS-Aktivierung (temporär deaktivieren)
 * Zeile **25**: `read_only: true` bei `key.pem`
@@ -35,7 +44,7 @@
 docker compose up -d
 ```
 
-Dann in einem zweiten Terminal:
+Öffne anschließend ein zweites Terminal und betrete den Container:
 
 ```bash
 docker compose exec postgres bash
@@ -70,7 +79,7 @@ docker compose down
 
 ### 5. `postgres/compose.yml` wiederherstellen
 
-🔁 **Folgende Änderungen rückgängig machen:**
+🔁 **Jetzt folgende Änderungen rückgängig machen:**
 
 * Zeilen **7–10**: `command:`-Block zur TLS-Aktivierung wieder aktivieren
 * Zeilen **25, 29**: `read_only: true` wieder hinzufügen
@@ -80,15 +89,19 @@ docker compose down
 
 ### 6. SQL-Daten laden
 
+Starte den Container erneut:
+
 ```bash
 docker compose up -d
 ```
 
-Dann in einem zweiten Terminal:
+Dann erneut in den Container wechseln:
 
 ```bash
 docker compose exec postgres bash
 ```
+
+Führe anschließend folgende SQL-Skripte nacheinander aus:
 
 ```bash
 psql -U postgres -d postgres -f /sql/answer/create-answer-db.sql
@@ -106,6 +119,8 @@ psql -U vibe_profile_db_user -d vibe_profile_db -f /sql/vibe-profile/create-vibe
 exit
 ```
 
+Stoppe danach den Container erneut:
+
 ```bash
 docker compose down
 ```
@@ -113,6 +128,8 @@ docker compose down
 ---
 
 ### 7. App starten
+
+Wechsle ins App-Verzeichnis und starte die Anwendung:
 
 ```bash
 cd app
