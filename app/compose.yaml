@@ -147,7 +147,7 @@ services:
         condition: service_healthy
     ports:
       - target: 3000
-        published: 3000
+        published: 4000
 
   notification:
     container_name: notification
