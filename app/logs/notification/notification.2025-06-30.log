@@ -12,3 +12,17 @@
 {"level":30,"time":1751263353298,"pid":7,"hostname":"de0086a6a9f6","class":"BannerService","msg":"Benutzer: node"}
 {"level":30,"time":1751263353298,"pid":7,"hostname":"de0086a6a9f6","class":"BannerService","msg":"Swagger UI: /swagger"}
 {"level":30,"time":1751263353298,"pid":7,"hostname":"de0086a6a9f6","class":"BannerService","msg":"==============================="}
+{"level":20,"time":1751263840214,"pid":7,"hostname":"9175f5bebc26","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080/auth\"}"}
+{"level":20,"time":1751263840214,"pid":7,"hostname":"9175f5bebc26","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080/auth\"}"}
+{"level":30,"time":1751263841810,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263841810,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Anwendungsname: Product"}
+{"level":30,"time":1751263841810,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263841810,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263841811,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Protokol: http"}
+{"level":30,"time":1751263841811,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Host: 9175f5bebc26"}
+{"level":30,"time":1751263841811,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263841811,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Datenbank: notification"}
+{"level":30,"time":1751263841811,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263841811,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263841811,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"Swagger UI: /swagger"}
+{"level":30,"time":1751263841811,"pid":7,"hostname":"9175f5bebc26","class":"BannerService","msg":"==============================="}

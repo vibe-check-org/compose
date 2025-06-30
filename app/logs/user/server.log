@@ -381,3 +381,171 @@
 {"level":40,"time":1751263760494,"pid":7,"hostname":"7754d5828eb3","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
 {"level":20,"time":1751263760494,"pid":7,"hostname":"7754d5828eb3","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
 {"level":20,"time":1751263760499,"pid":7,"hostname":"7754d5828eb3","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
+{"level":20,"time":1751263840064,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263840064,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263840137,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263840137,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263840137,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263840137,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263840137,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263840137,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Anwendungsname: User"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Host: 17cb411f123b"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Datenbank: user_db"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263840241,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"==============================="}
+{"level":40,"time":1751263840243,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
+{"level":20,"time":1751263840243,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
+{"level":20,"time":1751263840260,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
+{"level":20,"time":1751263841373,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263841373,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263841399,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263841399,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263841399,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263841399,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263841399,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263841399,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Anwendungsname: User"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Host: 17cb411f123b"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Datenbank: user_db"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"==============================="}
+{"level":40,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
+{"level":20,"time":1751263841470,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
+{"level":20,"time":1751263841476,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
+{"level":20,"time":1751263842323,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263842323,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263842357,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263842357,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263842357,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263842357,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263842357,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263842357,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Anwendungsname: User"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Host: 17cb411f123b"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Datenbank: user_db"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"==============================="}
+{"level":40,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
+{"level":20,"time":1751263842414,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
+{"level":20,"time":1751263842419,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
+{"level":20,"time":1751263843383,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263843383,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263843413,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263843413,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263843413,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263843413,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263843413,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263843413,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":30,"time":1751263843480,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263843480,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Anwendungsname: User"}
+{"level":30,"time":1751263843480,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263843480,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263843480,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Host: 17cb411f123b"}
+{"level":30,"time":1751263843480,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263843480,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Datenbank: user_db"}
+{"level":30,"time":1751263843481,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263843481,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263843481,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"==============================="}
+{"level":40,"time":1751263843481,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
+{"level":20,"time":1751263843481,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
+{"level":20,"time":1751263843485,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
+{"level":20,"time":1751263845186,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263845186,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263845220,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263845220,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263845220,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263845220,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263845220,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263845220,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Anwendungsname: User"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Host: 17cb411f123b"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Datenbank: user_db"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"==============================="}
+{"level":40,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
+{"level":20,"time":1751263845279,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
+{"level":20,"time":1751263845283,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
+{"level":20,"time":1751263847625,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263847626,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263847658,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263847658,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263847658,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263847658,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263847658,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263847658,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Anwendungsname: User"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Host: 17cb411f123b"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Datenbank: user_db"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263847712,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"==============================="}
+{"level":40,"time":1751263847713,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
+{"level":20,"time":1751263847713,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
+{"level":20,"time":1751263847718,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
+{"level":20,"time":1751263851514,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263851514,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263851547,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263851547,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263851547,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263851547,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263851547,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263851547,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Anwendungsname: User"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Host: 17cb411f123b"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Datenbank: user_db"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"==============================="}
+{"level":40,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
+{"level":20,"time":1751263851604,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
+{"level":20,"time":1751263851609,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
+{"level":20,"time":1751263858576,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263858576,"pid":7,"hostname":"17cb411f123b","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://keycloak:8080\"}"}
+{"level":20,"time":1751263858613,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263858613,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263858613,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"user.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263858613,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.shutdown.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263858613,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.restart.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":20,"time":1751263858613,"pid":7,"hostname":"17cb411f123b","class":"KafkaEventDispatcherService","msg":"📩 Registriere Topic \"all.start.orchestrator\" für OrchestratorHandler.handle()"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Anwendungsname: User"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Host: 17cb411f123b"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Datenbank: user_db"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751263858685,"pid":7,"hostname":"17cb411f123b","class":"BannerService","msg":"==============================="}
+{"level":40,"time":1751263858686,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"postgres: DB wird neu geladen"}
+{"level":20,"time":1751263858686,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"dropScript = /opt/app/dist/config/resources/db/postgres/drop.sql"}
+{"level":20,"time":1751263858690,"pid":7,"hostname":"17cb411f123b","class":"DbPopulateService","msg":"createScript = /opt/app/dist/config/resources/db/postgres/create.sql"}
