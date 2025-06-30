@@ -16,8 +16,16 @@
   "roles": {
     "realm": [
       {
-        "name": "Admin",
+        "name": "ADMIN",
         "description": "Realm-weite Admin-Rolle"
+      },
+      {
+        "name": "BEWERBER",
+        "description": "Realm-weite Bewerber-Rolle"
+      },
+      {
+        "name": "RECRUITER",
+        "description": "Realm-weite HR-Rolle"
       }
     ],
     "client": {
@@ -33,9 +41,22 @@
       "enabled": true,
       "credentials": [{ "type": "password", "value": "p" }],
       "clientRoles": {
-        "vibeCheck": ["admin"]
+        "vibeCheck": ["admin"],
+        "realm-management": [
+          "manage-users",
+          "view-users",
+          "query-users",
+          "impersonation",
+          "manage-realm",
+          "view-realm",
+          "view-identity-providers",
+          "manage-identity-providers",
+          "view-events",
+          "manage-events",
+          "view-roles"
+        ]
       },
-      "realmRoles": ["Admin"]
+      "realmRoles": ["ADMIN"]
     },
     {
       "username": "user",
@@ -46,7 +67,20 @@
       "credentials": [{ "type": "password", "value": "p" }],
       "clientRoles": {
         "vibeCheck": ["user"]
-      }
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "username": "recruiter",
+      "email": "recruiter@vibeCheck.de",
+      "firstName": "Recruiter",
+      "lastName": "VibeCheck",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["RECRUITER"]
     }
   ]
 }
