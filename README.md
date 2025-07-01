@@ -21,7 +21,7 @@
 
 📁 **Ordner umbenennen:**
 
-> Benenne `volumes/postgres template` in `volumes/postgres` um, damit `docker compose` korrekt funktioniert.
+> Benenne `volumes/postgres template` in `volumes/postgres` (den alten postgres davor löschen!) um, damit `docker compose` korrekt funktioniert.
 
 ---
 
@@ -134,6 +134,6 @@ docker compose down
 Wechsle ins App-Verzeichnis und starte die Anwendung:
 
 ```bash
-cd app
+cd ../app
 docker compose up -d
 ```
