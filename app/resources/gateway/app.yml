@@ -13,7 +13,6 @@ subgraph:
   notification: http://notification:3000/graphql
   questionnaire: http://questionnaire:3000/graphql
   user: http://user:3000/graphql
-  vibeProfile: http://vibeProfile:3000/graphql
 
 # ==============================================================================
 # K A F K A

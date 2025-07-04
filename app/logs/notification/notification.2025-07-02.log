@@ -1,0 +1,16 @@
+{"level":20,"time":1751483967680,"pid":6,"hostname":"3763d2d5b891","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://localhost:8880\"}"}
+{"level":20,"time":1751483967681,"pid":6,"hostname":"3763d2d5b891","class":"KeycloakService","msg":"keycloakClient={\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"common\":{\"Accept\":\"application/json, text/plain, */*\"},\"delete\":{},\"get\":{},\"head\":{},\"post\":{},\"put\":{},\"patch\":{}},\"baseURL\":\"http://localhost:8880\"}"}
+{"level":20,"time":1751483967848,"pid":6,"hostname":"3763d2d5b891","class":"KafkaEventDispatcherService","msg":"🧠 Registriere Handler für Event: notification.create.user"}
+{"level":30,"time":1751483968757,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"=== Anwendungsinformationen ==="}
+{"level":30,"time":1751483968757,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Anwendungsname: Product"}
+{"level":30,"time":1751483968757,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Node.js-Version: v23.10.0"}
+{"level":30,"time":1751483968757,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Umgebung: development"}
+{"level":30,"time":1751483968757,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Protokol: http"}
+{"level":30,"time":1751483968757,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Host: 3763d2d5b891"}
+{"level":30,"time":1751483968758,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Port: 3000"}
+{"level":30,"time":1751483968758,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Datenbank: notification"}
+{"level":30,"time":1751483968758,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Betriebssystem: Linux (6.10.14-linuxkit)"}
+{"level":30,"time":1751483968758,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Benutzer: node"}
+{"level":30,"time":1751483968758,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"Swagger UI: /swagger"}
+{"level":30,"time":1751483968758,"pid":6,"hostname":"3763d2d5b891","class":"BannerService","msg":"==============================="}
+{"level":20,"time":1751483972411,"pid":6,"hostname":"3763d2d5b891","class":"RequestLoggerMiddleware","msg":"method=POST, url=/graphql, header={\"content-type\":\"application/json\",\"accept\":\"*/*\",\"content-length\":\"69\",\"user-agent\":\"minipass-fetch/3.0.5 (+https://github.com/isaacs/minipass-fetch)\",\"accept-encoding\":\"gzip,deflate\",\"host\":\"notification:3000\",\"connection\":\"keep-alive\"}"}

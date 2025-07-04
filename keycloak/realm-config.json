@@ -6,7 +6,12 @@
       "clientId": "vibeCheck",
       "name": "vibeCheck",
       "rootUrl": "https://localhost:3000",
-      "redirectUris": ["http://localhost:3000/api/auth/callback/keycloak", "https://oauth.pstmn.io/v1/callback", "http://localhost:4000/api/auth/callback/keycloak", "http://frontend:4000/api/auth/callback/keycloak"],
+      "redirectUris": [
+        "http://localhost:3000/api/auth/callback/keycloak",
+        "https://oauth.pstmn.io/v1/callback",
+        "http://localhost:4000/api/auth/callback/keycloak",
+        "http://frontend:4000/api/auth/callback/keycloak"
+      ],
       "publicClient": false,
       "secret": "zomzt73VuP6LTUpPpZf5pghlv8exNCtB",
       "protocol": "openid-connect",
@@ -34,6 +39,7 @@
   },
   "users": [
     {
+      "id": "00000000-0000-0000-0000-000000000000",
       "username": "admin",
       "email": "admin@vibeCheck.de",
       "firstName": "Admin",
@@ -59,18 +65,7 @@
       "realmRoles": ["ADMIN"]
     },
     {
-      "username": "user",
-      "email": "user@vibeCheck.de",
-      "firstName": "User",
-      "lastName": "VibeCheck",
-      "enabled": true,
-      "credentials": [{ "type": "password", "value": "p" }],
-      "clientRoles": {
-        "vibeCheck": ["user"]
-      },
-      "realmRoles": ["BEWERBER"]
-    },
-    {
+      "id": "10000000-0000-0000-0000-000000000000",
       "username": "recruiter",
       "email": "recruiter@vibeCheck.de",
       "firstName": "Recruiter",
@@ -81,6 +76,123 @@
         "vibeCheck": ["user"]
       },
       "realmRoles": ["RECRUITER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "username": "lena",
+      "email": "lena@example.com",
+      "firstName": "Lena",
+      "lastName": "Müller",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000002",
+      "username": "username-2",
+      "email": "tom@example.com",
+      "firstName": "Tom",
+      "lastName": "Schmidt",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000003",
+      "username": "username-3",
+      "email": "maya@example.com",
+      "firstName": "Maya",
+      "lastName": "Klein",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000004",
+      "username": "username-4",
+      "email": "anna@example.com",
+      "firstName": "Anna",
+      "lastName": "Fischer",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000005",
+      "username": "username-5",
+      "email": "leon@example.com",
+      "firstName": "Leon",
+      "lastName": "Bauer",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000006",
+      "username": "username-6",
+      "email": "julia@example.com",
+      "firstName": "Julia",
+      "lastName": "Krüger",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000008",
+      "username": "username-8",
+      "email": "sophie@example.com",
+      "firstName": "Sophie",
+      "lastName": "Hartmann",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000009",
+      "username": "username-9",
+      "email": "tim@example.com",
+      "firstName": "Tim",
+      "lastName": "Lang",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000010",
+      "username": "username-10",
+      "email": "clara@example.com",
+      "firstName": "Clara",
+      "lastName": "Berg",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "p" }],
+      "clientRoles": {
+        "vibeCheck": ["user"]
+      },
+      "realmRoles": ["BEWERBER"]
     }
   ]
 }

@@ -143,8 +143,6 @@ services:
         condition: service_healthy
       user:
         condition: service_healthy
-      vibeProfile:
-        condition: service_healthy
     ports:
       - target: 3000
         published: 4000
@@ -298,58 +296,6 @@ services:
       timeout: 5s
       retries: 3
       start_period: 5s
-
-  vibeProfile:
-    container_name: vibeProfile
-    image: ghcr.io/vibe-check-org/vibe-profile-service:latest
-    pull_policy: always
-    restart: unless-stopped
-    env_file: 
-      - ./env/vibeProfile.env
-      - ./.health.env
-    volumes:
-      - type: bind
-        source: ./env/vibeProfile.env
-        target: /workspace/.env
-        read_only: true
-      - type: bind
-        source: ./.health.env
-        target: /workspace/.health.env
-      - type: bind
-        source: ../../keys/certificate.crt
-        target: /workspace/certificate.crt
-        read_only: true
-      - type: bind
-        source: ../../keys/key.pem
-        target: /workspace/key.pem
-        read_only: true
-      - type: bind
-        source: ./logs/vibe-profile
-        target: /opt/app/log
-      - type: bind
-        source: ./env/vibeProfile.env
-        target: /opt/app/dist/config/env
-        read_only: true
-      - type: bind
-        source: ./resources/vibeProfile
-        target: /opt/app/dist/config/resources
-        read_only: true
-    ports:
-      - target: 3000
-        published: 3002
-    depends_on:
-      mongodb:
-        condition: service_healthy
-      kafka:
-        condition: service_healthy
-    healthcheck:
-      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/health/readiness || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-      start_period: 5s
-
-
 
 
 
