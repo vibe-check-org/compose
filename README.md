@@ -137,3 +137,19 @@ Wechsle ins App-Verzeichnis und starte die Anwendung:
 cd ../app
 docker compose up -d
 ```
+
+
+ps. im Frontend benötigt man eine `.env` Datei mit folgendem Inhalt:
+
+```text
+NEXTAUTH_SECRET=dein-geheimes-token
+NEXTAUTH_URL=http://localhost:3000
+
+NEXT_PUBLIC_BACKEND_SERVER_URL=http://localhost:4000/graphql
+NEXT_PUBLIC_KEYCLOAK_CLIENT_ID=vibeCheck
+NEXT_PUBLIC_KEYCLOAK_CLIENT_SECRET=zomzt73VuP6LTUpPpZf5pghlv8exNCtB
+NEXT_PUBLIC_KEYCLOAK_ISSUER=http://localhost:8080/realms/vibeCheck
+
+NEXT_PUBLIC_DEFAULT_ROUTE=/profile
+NODE_ENV=development
+```
